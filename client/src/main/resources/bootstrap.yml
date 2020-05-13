@@ -1,0 +1,20 @@
+server:
+  port: 14001
+spring:
+  application:
+    name: ConfigClient
+  profiles:
+    active: loc
+  cloud:
+    config:
+      uri: http://localhost:14000 # 对应config-server地址，默认值http://localhost:8888
+      profile: dev # 对应ConfigServer获取的配置文件的{profile}
+      label: master # 对应ConfigServer获取的配置文件的{label}，即Git仓库分支支
+      name: config
+
+management:
+  endpoints:
+    web:
+      exposure:
+        #加载所有的端点，默认只加载了info、health
+        include: '*'

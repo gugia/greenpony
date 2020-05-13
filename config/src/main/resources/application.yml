@@ -10,5 +10,5 @@ spring:
           uri: https://github.com/gugia/greenpony.git
           username:
           password:
-          search-paths: '{application}'
+          search-paths: properties #'{application}'
       label: master

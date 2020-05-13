@@ -1,0 +1,4 @@
+env: loc
+
+loc:
+  value: this is local value.
